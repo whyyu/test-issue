@@ -1,0 +1,17 @@
+import { DatePicker } from 'antd';
+import moment from 'moment';
+const { MonthPicker, RangePicker } = DatePicker;
+
+const dateFormat = 'YYYY-MM-DD';
+ReactDOM.render(
+  <div>
+    <DatePicker defaultValue={moment('2017-04-27', dateFormat)} disabled />
+    <br />
+    <MonthPicker defaultValue={moment('2017-08-31', 'YYYY-MM-DD')} disabled />
+    <br />
+    <RangePicker
+      defaultValue={[moment('2017-04-27', dateFormat), moment('2017-08-31', dateFormat)]}
+      disabled
+    />
+  </div>
+, mountNode);
